@@ -1,0 +1,167 @@
+/* reset css */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+i.icon {
+  color: rgb(172, 4, 4);
+  font-size: 1.1rem;
+  margin-right: 10px;
+  flex: 1;
+}
+
+img {
+  width: 100%;
+}
+
+h1,
+h2,
+h3 {
+  font-family: poppins;
+}
+
+body {
+  background-color: #ccc;
+}
+
+main {
+  max-width: 1000px;
+  width: 100%;
+  background-color: #fff;
+  padding: 0 30px;
+  margin: 20px auto;
+}
+
+header {
+  /* this font family is temporary */
+  font-family: poppins;
+
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 0;
+}
+
+.links {
+  display: flex;
+  /* gap: 25px; */
+  flex-wrap: wrap;
+}
+
+.links a {
+  display: flex;
+  align-items: center;
+  margin-right: 40px;
+  gap: 5px;
+}
+
+.profile-img {
+  width: 130px;
+  height: auto;
+}
+
+h2 {
+  position: relative;
+  width: 100%;
+  z-index: 999;
+  margin-bottom: 10px;
+}
+
+h2::after {
+  content: "";
+  width: 100%;
+  height: 5px;
+  background: linear-gradient(90deg, rgb(222, 252, 141), 50%, white, transparent);
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  z-index: -99;
+}
+
+section {
+  padding: 10px 0;
+}
+
+.section-subheading {
+  padding: 10px 0;
+}
+
+/* employment history */
+.section-content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px 0;
+  font-size: 1.2rem;
+}
+
+.section-content-item {
+  display: flex;
+  margin-bottom: 5px;
+  font-size: 1.3rem;
+}
+
+.section-content-left {
+  width: 150px;
+  font-size: 1.2rem;
+}
+
+.section-content-right {
+  width: 100%;
+}
+
+.section-content-right>div {
+  padding-bottom: 10px;
+}
+
+ul.section-content {
+  counter-reset: counter;
+}
+
+li.section-content-list {
+  list-style: none;
+  counter-increment: counter;
+  display: flex;
+  gap: 20px;
+  padding-bottom: 10px;
+}
+
+li.section-content-list p,
+.section-content-right p,
+.reference-section p {
+  font-size: 1.3rem;
+  line-height: 1.5;
+}
+
+li.section-content-list::before {
+  content: counter(counter);
+  width: 30px !important;
+  height: 30px;
+  background-color: rgb(172, 4, 4);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+li.section-content-list p {
+  flex: 1;
+}
+
+.skill-section .section-content-left {
+  text-align: right;
+  width: 100px;
+  padding-right: 20px;
+}
+
+.skill-section .section-content-right {
+  display: flex;
+  align-items: center;
+}
